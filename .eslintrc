@@ -1,0 +1,96 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "react-app",
+    "prettier",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "plugins": [
+    "prettier",
+    "react",
+    "jsx-a11y"
+  ],
+  "settings": {
+    "react": {
+      "version": "16.9.0"
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "rules": {
+    "no-undef": 1,
+    "no-unused-vars": [
+      1,
+      {
+        "ignoreRestSiblings": true
+      }
+    ],
+    "prettier/prettier": 1,
+    "react/button-has-type": 2,
+    "react/default-props-match-prop-types": 2,
+    "react/jsx-fragments": [1, "element"],
+    "react/no-access-state-in-setstate": 2,
+    "react/no-direct-mutation-state": 2,
+    "react/no-redundant-should-component-update": 1,
+    "react/no-typos": 2,
+    "react/no-string-refs": 2,
+    "react/no-unknown-property": 1,
+    "react/no-unused-prop-types": 1,
+    "react/no-unused-state": 1,
+    "react/prefer-stateless-function": 1,
+    "react/prop-types": 2,
+    "react/require-default-props": 1,
+    "react/self-closing-comp": 1,
+    "react/sort-comp": 1,
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "hrefLeft",
+          "hrefRight"
+        ],
+        "aspects": [
+          "invalidHref",
+          "preferButton"
+        ]
+      }
+    ],
+    "react/jsx-curly-brace-presence": [
+      1,
+      {
+        "props": "never",
+        "children": "never"
+      }
+    ],
+    "react/jsx-no-duplicate-props": 1,
+    "react/jsx-no-undef": 2,
+    "react/jsx-uses-vars": 2,
+    "jsx-a11y/alt-text": 1,
+    "jsx-a11y/no-static-element-interactions": 2
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js", "*.story.js"],
+      "rules": {
+        "react/button-has-type": "off",
+        "react/prop-types": "off",
+        "react/require-default-props": "off"
+      }
+    }
+  ]
+}
